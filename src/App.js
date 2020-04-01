@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './common/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import CounterContainer from "./Containers/CounterContainer";
+import UsersContainer from "./Containers/UsersContainer";
+import SumContainer from "./Containers/SumContainer";
+import FreeCounterContainer from "./Containers/FreeCounterContainer";
+//import ReselectSum from "./ReselectSum";
+//import UseCounter from "./UseCounter";
+
+
+const App = () => {
+    console.log('RENDER APP');
+    console.log('-----------------------------');
+    return (
+        <div className="App">
+            <h1>APP</h1>
+            <CounterContainer />
+            <hr />
+            <UsersContainer />
+            <hr />
+            <SumContainer />
+            {/* <ReselectSum /> */}
+            {/* <UseCounter /> */}
+            <hr />
+            <FreeCounterContainer />
+        </div>
+    );
+};
 
 export default App;
